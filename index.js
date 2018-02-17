@@ -3,7 +3,7 @@ var cpus = require('os').cpus
 
 var len = cpus().length
 
-module.exports = function boringCluster (mod) {
+function boringCluster (mod) {
   if (cluster.isMaster) {
     for (var i = 0; i < len; i++) {
       cluster.fork()
@@ -17,3 +17,5 @@ module.exports = function boringCluster (mod) {
     require(mod)
   }
 }
+
+module.exports = boringCluster

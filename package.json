@@ -9,6 +9,9 @@
   },
   "license": "MIT",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {},
   "homepage": "https://github.com/zacanger/boring-cluster#readme",
   "repository": {
@@ -18,7 +21,16 @@
   "bugs": "https://github.com/zacanger/boring-cluster/issues",
   "keywords": [
     "cluster",
-    "boring-cluster"
+    "clustering",
+    "express",
+    "koa",
+    "manager",
+    "node",
+    "process",
+    "server",
+    "simple",
+    "worker",
+    "workers"
   ],
   "dependencies": {},
   "devDependencies": {},
