@@ -12,8 +12,10 @@ A really boring cluster module
 
 ```javascript
 const cluster = require('boring-cluster')
+const { resolve } = require('path')
+const server = resolve(__dirname, 'server')
 
-cluster('./server')
+cluster(server)
 ```
 
 That's it.
