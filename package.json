@@ -9,10 +9,7 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "start": "node index",
-    "test": ""
-  },
+  "scripts": { },
   "homepage": "https://github.com/zacanger/boring-cluster#readme",
   "repository": {
     "type": "git",
@@ -20,12 +17,12 @@
   },
   "bugs": "https://github.com/zacanger/boring-cluster/issues",
   "keywords": [
-    "",
+    "cluster",
     "boring-cluster"
   ],
   "dependencies": {},
   "devDependencies": {},
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=4.0.0"
   }
 }
