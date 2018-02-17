@@ -10,15 +10,37 @@ A really boring cluster module
 
 ## Usage
 
+This is all you need to do:
+
 ```javascript
 const cluster = require('boring-cluster')
 const { resolve } = require('path')
-const server = resolve(__dirname, 'server')
+// `thing` could be a server, or any other process you want to cluster
+const thing = resolve(__dirname, 'thing')
 
-cluster(server)
+cluster(thing)
 ```
 
-That's it.
+Full example with an Express server:
+
+```javascript
+// index.js
+const cluster = require('boring-cluster')
+const { resolve } = require('path')
+cluster(resolve(__dirname, 'server'))
+
+// server.js
+const cluster = require('cluster') // node builtin cluster
+const express = require('express')
+const port = 2000
+const app = express
+
+// all your application-specific stuff goes here
+app.use(express.static(__dirname))
+app.listen(port, () => {
+  console.log(`Cluster worker ${cluster.worker.id} listening on ${port}`)
+})
+```
 
 ## License
 
