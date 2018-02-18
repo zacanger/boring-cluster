@@ -42,6 +42,9 @@ app.listen(port, () => {
 })
 ```
 
+This is tested on Node as far back as 4.1.2, and may work on even more ancient
+versions.
+
 ## License
 
 [MIT](./LICENSE.md)
