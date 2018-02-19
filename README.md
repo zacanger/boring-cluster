@@ -21,13 +21,27 @@ const thing = resolve(__dirname, 'thing')
 cluster(thing)
 ```
 
+An optional second argument can be passed with the shape
+
+```javascript
+{ workers: number, name: string }
+```
+
+Example:
+```javascript
+cluster(resolve(__dirname, 'some-thing'), { workers: 2, name: 'My Awesome App' })
+```
+
 Full example with an Express server:
 
 ```javascript
 // index.js
 const cluster = require('boring-cluster')
 const { resolve } = require('path')
-cluster(resolve(__dirname, 'server'))
+cluster(
+  resolve(__dirname, 'server'),
+  { name: 'sweet server', workers: 2 }
+)
 
 // server.js
 const cluster = require('cluster') // node builtin cluster
