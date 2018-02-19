@@ -5,6 +5,7 @@ function boringCluster (mod, opt) {
   var opts = opt || {}
   var len = opts.workers || cpus().length
   var name = opts.name || ''
+
   if (cluster.isMaster) {
     for (var i = 0; i < len; i++) {
       cluster.fork()
