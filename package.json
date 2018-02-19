@@ -1,7 +1,7 @@
 {
   "name": "boring-cluster",
   "description": "A really boring cluster module",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
