@@ -56,7 +56,7 @@ app.listen(port, () => {
 })
 ```
 
-This is tested on Node as far back as 4.1.2, and may work on even more ancient
+This is tested on Node as far back as 6.4.0, and may work on even more ancient
 versions.
 
 ## License

@@ -1,18 +1,19 @@
-var cluster = require('cluster')
-var cpus = require('os').cpus
+const cluster = require('cluster')
+const { cpus } = require('os')
 
-function boringCluster (mod, opt) {
-  var opts = opt || {}
-  var len = opts.workers || cpus().length
-  var name = opts.name || ''
+const boringCluster = (mod, opts = {
+  workers: cpus().length,
+  name: ''
+}) => {
+  const { workers, name } = opts
 
   if (cluster.isMaster) {
-    for (var i = 0; i < len; i++) {
+    Array.from(workers).fill(null).forEach(() => {
       cluster.fork()
-    }
+    })
 
-    cluster.on('exit', function (worker) {
-      console.log(name + name ? ' ' : '' + worker.process.pid + ' died; forking.')
+    cluster.on('exit', (worker) => {
+      console.log(`${name ? `${name} ` : ''} ${worker.process.pid} died; forking.`)
       cluster.fork()
     })
   } else {
