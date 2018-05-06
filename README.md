@@ -14,11 +14,8 @@ This is all you need to do:
 
 ```javascript
 const cluster = require('boring-cluster')
-const { resolve } = require('path')
 // `thing` could be a server, or any other process you want to cluster
-const thing = resolve(__dirname, 'thing')
-
-cluster(thing)
+cluster('./thing')
 ```
 
 An optional second argument can be passed with the shape
@@ -29,7 +26,7 @@ An optional second argument can be passed with the shape
 
 Example:
 ```javascript
-cluster(resolve(__dirname, 'some-thing'), { workers: 2, name: 'My Awesome App' })
+cluster('some-thing', { workers: 2, name: 'My Awesome App' })
 ```
 
 Full example with an Express server:
@@ -37,9 +34,8 @@ Full example with an Express server:
 ```javascript
 // index.js
 const cluster = require('boring-cluster')
-const { resolve } = require('path')
 cluster(
-  resolve(__dirname, 'server'),
+  'server',
   { name: 'sweet server', workers: 2 }
 )
 
@@ -58,6 +54,12 @@ app.listen(port, () => {
 
 This is tested on Node as far back as 6.4.0, and may work on even more ancient
 versions.
+
+## Change
+
+* 3.0.0 - 6th May 2018:
+  * Resolve module internally
+  * To upgrade, change `cluster(resolve(__dirname, 'foo'))` to `cluster('foo')`
 
 ## License
 
