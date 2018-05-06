@@ -10,7 +10,7 @@ const boringCluster = (mod, opts = {}) => {
     })
 
     cluster.on('exit', (worker) => {
-      console.log(`${name ? `${name} ` : ''} ${worker.process.pid} died; forking.`)
+      console.log(`${name || ''} ${worker.process.pid} died; forking.`.trim())
       cluster.fork()
     })
   } else {

@@ -1,7 +1,4 @@
 {
   "root": true,
-  "extends": "eslint-config-jane",
-  "rules": {
-    "no-var": 0
-  }
+  "extends": "eslint-config-zacanger"
 }
