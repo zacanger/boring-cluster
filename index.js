@@ -2,12 +2,14 @@ const cluster = require('cluster')
 const { cpus } = require('os')
 const { resolve } = require('path')
 
-const boringCluster = (m, opts = {}) => {
+const boringCluster = (m, {
+  name = '',
+  workers = cpus().length
+} = {}) => {
   const mod = resolve(m)
-  const { workers = cpus().length, name = '' } = opts
 
   if (cluster.isMaster) {
-    Array(workers).fill(null).forEach(() => {
+    Array.from({ length: workers }).forEach(() => {
       cluster.fork()
     })
 
