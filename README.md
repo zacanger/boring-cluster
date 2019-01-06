@@ -53,6 +53,8 @@ app.listen(port, () => {
 
 ## Changes
 
+* 5.0.0 - 5th January 2019:
+  * Bump min `engines` support to Node 10 (LTS)
 * 4.0.0 - 22nd September 2018:
   * Drop Node 6 support
 * 3.0.0 - 6th May 2018:
