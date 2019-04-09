@@ -3,8 +3,8 @@
   "description": "A really boring cluster module",
   "version": "5.0.0",
   "author": {
-    "name": "Zac Anger",
     "email": "zac@zacanger.com",
+    "name": "Zac Anger",
     "url": "http://zacanger.com"
   },
   "license": "MIT",
@@ -13,7 +13,7 @@
     "index.js"
   ],
   "scripts": {
-    "preversion": "npm t",
+    "preversion": "npm t && sortpack",
     "test": "npm run test:lint",
     "test:lint": "eslint -c .eslintrc.json index.js"
   },
@@ -39,12 +39,13 @@
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "10.0.1",
-    "eslint": "5.12.0",
+    "eslint": "5.16.0",
     "eslint-config-zacanger": "3.4.2",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-promise": "4.0.1",
-    "eslint-plugin-unicorn": "6.0.1"
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-unicorn": "8.0.1",
+    "sortpack": "1.1.4"
   },
   "engines": {
     "node": ">=10.0.0"
