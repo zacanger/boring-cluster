@@ -1,7 +1,7 @@
 {
   "name": "boring-cluster",
   "description": "A really boring cluster module",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "author": {
     "email": "zac@zacanger.com",
     "name": "Zac Anger",
@@ -46,5 +46,4 @@
     "type": "ko-fi",
     "url": "https://ko-fi.com/zacanger"
   }
-
 }
