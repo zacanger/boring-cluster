@@ -2,10 +2,7 @@ const cluster = require('cluster')
 const { cpus } = require('os')
 const { resolve } = require('path')
 
-const boringCluster = (m, {
-  name = '',
-  workers = cpus().length
-} = {}) => {
+const boringCluster = (m, { name = '', workers = cpus().length } = {}) => {
   const mod = resolve(m)
 
   if (cluster.isMaster) {
