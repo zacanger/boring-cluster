@@ -37,7 +37,7 @@
     "workers"
   ],
   "devDependencies": {
-    "sortpack": "2.3.0",
+    "sortpack": "2.3.2",
     "standard": "17.0.0"
   },
   "engines": {
