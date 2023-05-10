@@ -2,6 +2,8 @@
 
 A really boring cluster module
 
+[Donate](https://ko-fi.com/zacanger)
+
 --------
 
 ## Installation
